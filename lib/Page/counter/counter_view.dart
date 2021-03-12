@@ -9,20 +9,46 @@ class CounterPage extends StatelessWidget {
     final CounterLogic logic = Get.put(CounterLogic());
 
     return Scaffold(
-      appBar: AppBar(title: const Text('GetX计数器')),
+      appBar: AppBar(title: const Text('GetX Counter')),
       body: Center(
-        child: Obx(
-          () {
-            logic.countBuildTime++;
-            Widget widget = Text(
-                '点击了 ${logic.count.value} 次, 刷新了 ${logic.countBuildTime} 次',
-                style: TextStyle(fontSize: 16.0));
-            return widget;
-          },
+        child: Column(
+          children: [
+            Obx(
+              () {
+                logic.countBuildTime++;
+                Widget widget = Text(
+                    'Click time:${logic.count.value}, build time:${logic.countBuildTime}',
+                    style: TextStyle(fontSize: 16.0));
+                return widget;
+              },
+            ),
+            FlatButton(
+              onPressed: () {
+                logic.sameValue();
+              },
+              child: const Icon(Icons.donut_small),
+            ),
+            Obx(
+              () {
+                Widget widget = Text(
+                    'People num:${logic.people.value}',
+                    style: TextStyle(fontSize: 16.0));
+                return widget;
+              },
+            ),
+            FlatButton(
+              onPressed: () {
+                logic.addPeople();
+              },
+              child: const Icon(Icons.add),
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => logic.increase(),
+        onPressed: () {
+          logic.increase();
+        },
         child: const Icon(Icons.add),
       ),
     );

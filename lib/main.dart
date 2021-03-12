@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:getx_usage/Page/counter/counter_view.dart';
+import 'package:getx_usage/Page/home_widget.dart';
+import 'package:getx_usage/rout_config.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +30,8 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: CounterPage(),
+      initialRoute: RouteConfig.main,
+      getPages: RouteConfig.getPages,
     );
   }
 }

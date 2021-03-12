@@ -2,7 +2,15 @@ import 'package:get/get.dart';
 
 class CounterLogic extends GetxController {
   var count = 0.obs;
+  var people = 0.obs;
   var countBuildTime = 0;
+
+  @override
+  void onInit() {
+    super.onInit();
+    /// 第一次赋值不再强制刷新
+    count.firstRebuild = false;
+  }
 
   ///自增
   ///count变化多次 widget只刷新一次 是因为setState不会马上刷新
@@ -13,5 +21,14 @@ class CounterLogic extends GetxController {
     ++count;
     count.value = count.value + 1;
     count.value = count.value - 1;
+  }
+
+  /// 有当响应式变量的值发生变化时，才会会执行刷新操作
+  sameValue() {
+    count.value = count.value;
+  }
+
+  addPeople() {
+    ++people;
   }
 }
