@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:getx_usage/Page/counter/counter_view.dart';
-import 'package:getx_usage/Page/home_widget.dart';
 import 'package:getx_usage/rout_config.dart';
 
 void main() {

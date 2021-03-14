@@ -1,9 +1,11 @@
 import 'package:get/get.dart';
+import 'package:getx_usage/Page/counter/User.dart';
 
 class CounterLogic extends GetxController {
   var count = 0.obs;
   var people = 0.obs;
   var countBuildTime = 0;
+  final user = User().obs;
 
   @override
   void onInit() {
@@ -30,5 +32,13 @@ class CounterLogic extends GetxController {
 
   addPeople() {
     ++people;
+  }
+
+  /// 更新自定义对象的响应类型 user.update或者user(User(name: '', age: 35))
+  updateUser() {
+    user.update((val) {
+      val.name += 'hei';
+      val.age += 1;
+    });
   }
 }

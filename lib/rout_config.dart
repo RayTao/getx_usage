@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:getx_usage/Page/counter_easy_get/counter_easy_get_view.dart';
 
 import 'Page/counter/counter_view.dart';
 import 'Page/home_widget.dart';
@@ -25,7 +25,8 @@ class RouteConfig {
   // static final String spanTwo = "/spanOne/spanTwo";
 
   ///GetX 计数器  跨页面交互
-  static final String counterGet = "/counterGet";
+  static final String counterObx = "/counter_Obx";
+  static final String counterBuilder = "/counter_Builder";
   static final String jumpOne = "/jumpOne";
   static final String jumpTwo = "/jumpOne/jumpTwo";
 
@@ -38,7 +39,8 @@ class RouteConfig {
     // GetPage(name: smartDialog, page: () => SmartDialogPage()),
     // GetPage(name: spanOne, page: () => SpanOnePage()),
     // GetPage(name: spanTwo, page: () => SpanTwoPage()),
-    GetPage(name: counterGet, page: () => CounterPage()),
+    GetPage(name: counterObx, page: () => CounterPage()),
+    GetPage(name: counterBuilder, page: () => CounterEasyGetPage()),
     // GetPage(name: jumpOne, page: () => JumpOnePage()),
     // GetPage(name: jumpTwo, page: () => JumpTwoPage()),
   ];

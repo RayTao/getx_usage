@@ -13,7 +13,7 @@ class CounterPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Obx(
+            Obx(//使用StreamBuilder会消耗一定内存
               () {
                 logic.countBuildTime++;
                 Widget widget = Text(
@@ -39,6 +39,13 @@ class CounterPage extends StatelessWidget {
             FlatButton(
               onPressed: () {
                 logic.addPeople();
+              },
+              child: const Icon(Icons.add),
+            ),
+            Obx(() => Text('Name: ${logic.user.value.name} age: ${logic.user.value.age}')),
+            FlatButton(
+              onPressed: () {
+                logic.updateUser();
               },
               child: const Icon(Icons.add),
             ),
