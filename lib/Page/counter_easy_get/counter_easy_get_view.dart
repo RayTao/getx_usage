@@ -22,7 +22,7 @@ class CounterEasyGetPage extends StatelessWidget {
                     'Click time:${logic.count}, build time:${logic.countBuildTime}');
               },
             ),
-            GetX(),
+            // GetX(),
           ],
         ),
       ),

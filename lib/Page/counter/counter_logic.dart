@@ -25,6 +25,12 @@ class CounterLogic extends GetxController {
     count.value = count.value - 1;
   }
 
+  increaseAndUpdate() {
+    countBuildTime++;
+    update();
+  }
+
+
   /// 有当响应式变量的值发生变化时，才会会执行刷新操作
   sameValue() {
     count.value = count.value;
