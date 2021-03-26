@@ -1,5 +1,6 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:getx_usage/Page/counter_easy_get/counter_easy_get_view.dart';
+import 'package:getx_usage/Page/super_controller/super_controller_view.dart';
 
 import 'Page/counter/counter_view.dart';
 import 'Page/home_widget.dart';
@@ -27,6 +28,7 @@ class RouteConfig {
   ///GetX 计数器  跨页面交互
   static final String counterObx = "/counter_Obx";
   static final String counterBuilder = "/counter_Builder";
+  static final String superController = "/superController";
   static final String jumpOne = "/jumpOne";
   static final String jumpTwo = "/jumpOne/jumpTwo";
 
@@ -41,6 +43,7 @@ class RouteConfig {
     // GetPage(name: spanTwo, page: () => SpanTwoPage()),
     GetPage(name: counterObx, page: () => CounterPage()),
     GetPage(name: counterBuilder, page: () => CounterEasyGetPage()),
+    GetPage(name: superController, page: () => SuperControllerPage()),
     // GetPage(name: jumpOne, page: () => JumpOnePage()),
     // GetPage(name: jumpTwo, page: () => JumpTwoPage()),
   ];
