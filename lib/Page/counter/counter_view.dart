@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_usage/Page/Bug_demo/dialog_jump_bug_page.dart';
-import 'package:getx_usage/Page/Bug_demo/memo_bug_page.dart';
 
 import 'counter_logic.dart';
 

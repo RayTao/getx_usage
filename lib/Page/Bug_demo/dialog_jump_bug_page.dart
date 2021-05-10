@@ -55,6 +55,10 @@ class _PageB extends StatelessWidget {
                       //   ),
                       // );
                       Get.to(_PageC());
+                      ///Let's leave this issue open, as we can improve this approach.
+                      ///What is happening is that on the back of the second page the navigation stack has a dialog before the home page,
+                      ///so the current route has not been changed yet and the GetX navigation blocks navigation for the same route.
+                      // Get.to(_PageC(), preventDuplicates: false);
                     },
                   ),
                 ),

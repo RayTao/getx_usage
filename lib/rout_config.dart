@@ -2,8 +2,10 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:getx_usage/Page/counter_easy_get/counter_easy_get_view.dart';
 import 'package:getx_usage/Page/super_controller/super_controller_view.dart';
 
+import 'Page/Bug_demo/getx_bug_page.dart';
 import 'Page/counter/counter_view.dart';
 import 'Page/home_widget.dart';
+import 'Page/online_shop/views/shopping_page.dart';
 
 class RouteConfig {
   ///主页面
@@ -31,6 +33,8 @@ class RouteConfig {
   static final String superController = "/superController";
   static final String jumpOne = "/jumpOne";
   static final String jumpTwo = "/jumpOne/jumpTwo";
+  static final String onlineShopping = "/online_shopping";
+  static final String getxBug = "/getx_bug_page";
 
   ///别名映射页面
   static final List<GetPage> getPages = [
@@ -44,6 +48,8 @@ class RouteConfig {
     GetPage(name: counterObx, page: () => CounterPage()),
     GetPage(name: counterBuilder, page: () => CounterEasyGetPage()),
     GetPage(name: superController, page: () => SuperControllerPage()),
+    GetPage(name: onlineShopping, page: () => ShoppingPage()),
+    GetPage(name: getxBug, page: () => GetxBugPage()),
     // GetPage(name: jumpOne, page: () => JumpOnePage()),
     // GetPage(name: jumpTwo, page: () => JumpTwoPage()),
   ];
